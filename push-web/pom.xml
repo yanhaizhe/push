@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>push-web</artifactId>
-    <packaging>war</packaging>
+    <!--<packaging>war</packaging>-->
     <version>${project.model.main.version}${maven.dependency.env}</version>
 
     <description>push-web project for Spring Boot</description>
@@ -19,40 +19,24 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- 移除嵌入式tomcat插件 -->
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>com.meitu.meipu</groupId>
-            <artifactId>push-app</artifactId>
+            <artifactId>push-client</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>com.meitu</groupId>
-            <artifactId>tardis-web</artifactId>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.meitu.mtrace</groupId>
-            <artifactId>mtrace-core</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

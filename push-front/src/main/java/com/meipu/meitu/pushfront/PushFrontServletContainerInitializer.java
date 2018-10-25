@@ -1,7 +1,5 @@
 package com.meipu.meitu.pushfront;
 
-import com.meitu.tardis.web.TardisConfigListener;
-import org.springframework.core.annotation.Order;
 import org.springframework.web.WebApplicationInitializer;
 
 import javax.servlet.ServletContext;
@@ -27,7 +25,7 @@ public class PushFrontServletContainerInitializer implements WebApplicationIniti
      */
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-        servletContext.addListener(TardisConfigListener.class);
-        servletContext.setInitParameter("tardisConfigLocation", "tardis.properties");
+//        servletContext.addListener(TardisConfigListener.class);
+//        servletContext.setInitParameter("tardisConfigLocation", "tardis.properties");
     }
 }

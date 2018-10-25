@@ -1,7 +1,7 @@
 package com.meipu.meitu.pushfront;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
  * @Description 项目以war包形式来启动过时，需要实现此类
